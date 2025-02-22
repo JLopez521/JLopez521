@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool performCaesarCipher(string& content, bool encrypt){
+bool performCaesarCipher(string& content, bool encrypt) {
     int shift = encrypt ? 3 : -3;
 
     for (char& ch: content) {
@@ -13,6 +13,8 @@ bool performCaesarCipher(string& content, bool encrypt){
             ch = static_cast<char>((ch - base + shift + 26) % 26 + base);
         }
     }
+    return true;
+}
 
 bool encryptFile(const string& filename, bool encrypt) {
     ifstream inFile(filename);
@@ -34,5 +36,7 @@ bool encryptFile(const string& filename, bool encrypt) {
 
       return true;
     }
+    return 0;
   }
-}
+
+
