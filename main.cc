@@ -6,13 +6,14 @@
 
 using namespace std;
 
+
 int main() {
   string filename;
   char mode;
   cout << "Enter the file name: ";
   getline(cin >> ws, filename);
 
-  cout << "1. Encrypt a file\n" << "2. Decrypt a file\n";
+  cout << "1. Encrypt a file\n" << "2. Decrypt a file\n" << "Enter your choice: ";
   cin >> mode;
 
   if (mode == '1') {
